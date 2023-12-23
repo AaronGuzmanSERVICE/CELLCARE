@@ -1,0 +1,168 @@
+
+    body {
+        margin: 0;
+        overflow: hidden;
+        background: url('https://i.ibb.co/YXJbSNy/Dise-o-sin-t-tulo.png') no-repeat center center fixed;
+        background-size: cover;
+        background-attachment: fixed; /* Mantén el fondo fijo */
+    }
+    
+    /* Resto del código permanece igual */
+    
+
+canvas {
+    display: block;
+}
+
+.redes {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 0;
+}
+
+.redes .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.redes .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 12px;
+    background: #fff;
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 3px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.redes .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 5px;
+    width: 5px;
+    background: #fff;
+    bottom: -2px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.redes .icon:hover .tooltip {
+    top: -30px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.redes .icon:hover span,
+.redes .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.redes .facebook:hover,
+.redes .facebook:hover .tooltip,
+.redes .facebook:hover .tooltip::before {
+    background: #1877F2;
+    color: #fff;
+}
+
+.redes .twitter:hover,
+.redes .twitter:hover .tooltip,
+.redes .twitter:hover .tooltip::before {
+    background: #1DA1F2;
+    color: #fff;
+}
+
+.redes .instagram:hover,
+.redes .instagram:hover .tooltip,
+.redes .instagram:hover .tooltip::before {
+    background: #E4405F;
+    color: #fff;
+}
+
+.redes .linkedin:hover,
+.redes .linkedin:hover .tooltip,
+.redes .linkedin:hover .tooltip::before {
+    background: #2b7cbe;
+    color: #fff;
+}
+
+.redes .pinterest:hover,
+.redes .pinterest:hover .tooltip,
+.redes .pinterest:hover .tooltip::before {
+    background: #bd0230;
+    color: #fff;
+}
+
+.redes .telegram:hover,
+.redes .telegram:hover .tooltip,
+.redes .telegram:hover .tooltip::before {
+    background: #46c2f3;
+    color: #fff;
+}
+
+/* Estilos para el texto de derechos reservados */
+.derechos-reservados {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    opacity: 0;
+    animation: fade-in 2s forwards;
+}
+
+/* Define la animación */
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Estilos para dispositivos más pequeños (ejemplo: teléfonos) */
+@media screen and (max-width: 600px) {
+    body {
+        background-attachment: scroll; /* Cambia a scroll en dispositivos móviles */
+    }
+
+    /* Resto del código para dispositivos móviles permanece igual */
+}
+
+
+    .redes .icon {
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    .redes .icon:hover {
+        transform: scale(1.2);
+    }
+
+    .derechos-reservados {
+        font-size: 12px;
+        bottom: 5px;
+    }
